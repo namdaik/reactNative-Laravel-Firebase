@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Calibri:400, 300, 700);
+
+body {
+  background: linear-gradient(to top, rgb(42, 158, 35)1%, white 99%);
+  height: 130vh;
+  vertical-align: middle;
+  display: flex;
+  font-family: 'Calibri', sans-serif !important;
+  font-size: 14px;
+}
+
+.board {
+  margin: auto;
+  margin-top:5%;
+  max-width: 100%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 768px) {
+  .board {
+    width: 90%;
+  }
+}
+
+.track {
+  position: relative;
+  background-color: #ddd;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  text-align: center;
+}
+.track .col {
+  flex-grow: 1;
+}
+/* .track .step {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 25%;
+  margin-top: -18px;
+  text-align: center;
+  position: relative
+} */
+
+.track .step.active:before {
+  background: #5ABD8C;
+}
+
+.track .step::before {
+  height: 7px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  top: 18px
+}
+
+/* .track .step.active .icon {
+  background: #5ABD8C;
+  color: #fff
+} */
+
+.track .icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 40px;
+  position: relative;
+  border-radius: 100%;
+  background: #5ABD8C;
+  top: -9px;
+}
+
+/* .track .step.active .text {
+  font-weight: 400;
+  color: #000
+} */
+
+.track .text {
+  display: block;
+  max-width: 200px;
+}
